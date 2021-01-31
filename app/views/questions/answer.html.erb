@@ -1,5 +1,19 @@
-<h1>This is the answer page 📬</h1>
+<h1>Stupid Coaching 📬</h1>
 
-<h2><%= @response %></h2>
+<blockquote>
+  <p>
+    <% if @question.blank? %>
+      😶
+    <% else %>
+      <%= @question %>
+    <% end %>
+  </p>
+  <cite>You</cite>
+</blockquote>
 
-<%= link_to "Back", ask_path %>
+<blockquote class="coach">
+  <p><%= @answer %></p>
+  <cite>Your coach</cite>
+</blockquote>
+
+<%= link_to "Ask a new question", ask_path %>
